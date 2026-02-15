@@ -4,14 +4,13 @@ package.name = macrovisionai
 package.domain = com.macrovision
 
 source.dir = .
-source.include_exts = py,png,jpg,json
+source.include_exts = py,png,jpg,json,txt
 
-version = 1.0.0
+version = 3.0.0
 
-# SEM PILLOW - só Kivy básico
 requirements = python3,kivy,pyjnius,android
 
-android.permissions = READ_EXTERNAL_STORAGE,WRITE_EXTERNAL_STORAGE,INTERNET
+android.permissions = READ_EXTERNAL_STORAGE,WRITE_EXTERNAL_STORAGE,INTERNET,FOREGROUND_SERVICE,SYSTEM_ALERT_WINDOW
 
 android.api = 33
 android.minapi = 21
@@ -20,12 +19,14 @@ android.archs = arm64-v8a
 
 android.accept_sdk_license = True
 
-android.presplash_color = #0a0a1a
+presplash.filename =
+android.presplash_color = #0a0a14
 
 orientation = portrait
 fullscreen = 0
 
 android.allow_backup = True
+android.wakelock = True
 
 [buildozer]
 log_level = 2
